@@ -5,27 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador Alura</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header class="alura-logo">
         <img src="./img/alura-logo.svg" alt="logo alura">
     </header>
 
     <body>
-        <label for="mensaje"><textarea class="input-mensaje" id="mensaje" cols="70" rows="10"
-                placeholder="Ingrese el texto aqui"></textarea>Solo letras minúsculas y sin acentos</label>
 
-
-        <input type="submit" value="Encriptar" class="encriptar">
-        <input type="submit" value="Desencriptar" class="desencriptar">
-
-        <label for="mensaje-resultado"></label>
-        <textarea class="output-mensaje" id="mensaje-resultado" cols="70" rows="10" readonly></textarea>
+        <form>
+            <fieldset>                
+                <textarea id="mensaje-box" placeholder="Ingrese el texto aqui"></textarea>
+                <label for="mensaje-box">Solo letras minúsculas y sin acentos</label>
+                <button class="encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </fieldset>
+            <fieldset>
+                <label for="mensaje-resultado-box"></label>
+                <textarea id="mensaje-resultado-box" readonly></textarea>
+            </fieldset>
+        </form>
 
         <footer>
             &copy; Todos los derechos reservados - David Gomez
         </footer>
+
+        <script src="script.js"></script>
 
     </body>
 

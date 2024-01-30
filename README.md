@@ -8,4 +8,6 @@
 - Campo para el texto que va a ser encriptado/desencriptado
 - Un botón para encriptar
 - Un botón para desencriptar
--Área para mostrar el texto encriptado/desencriptado.-->
+- Área para mostrar el texto encriptado/desencriptado.-->
+
+30-01-24 Se realizan los TO DO pendientes, se elabora un JS provisional y se trabaja en el CSS.
