@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -20,15 +21,16 @@
     <body>
 
         <form>
-            <fieldset>                
-                <textarea id="mensaje-box" placeholder="Ingrese el texto aqui"></textarea>
-                <label for="mensaje-box">Solo letras minúsculas y sin acentos</label>
-                <button class="encriptar" onclick="encriptar()">Encriptar</button>
-                <button class="desencriptar" onclick="desencriptar()">Desencriptar</button>
+            <fieldset class="editable">
+                <textarea id="mensaje-box" name="mensaje-box" placeholder="Ingrese el texto aqui"></textarea>
+                <label id="advertencia" for="mensaje-box"> &#9888; Solo letras minúsculas y sin acentos</label>
+                <button class="encriptar" onclick="encriptar();">Encriptar</button>
+                <button class="desencriptar" onclick="desencriptar();">Desencriptar</button>
             </fieldset>
-            <fieldset>
-                <label for="mensaje-resultado-box"></label>
-                <textarea id="mensaje-resultado-box" readonly></textarea>
+            <fieldset class="no-editable">
+                <textarea id="mensaje-resultado-box" name="mensaje-resultado-box" readonly></textarea>
+                <label for="mensaje-resultado-box">Respuesta:</label>
+
             </fieldset>
         </form>
 

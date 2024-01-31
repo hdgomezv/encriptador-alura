@@ -19,5 +19,3 @@ function desencriptar() {
     .replace(/ai/g, "a");
   document.getElementById("mensaje-resultado-box").value = originalText;
 }
-
-
