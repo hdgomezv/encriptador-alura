@@ -1,29 +1,32 @@
 function encriptar() {
   var mensajeEntrada = document.getElementById("caja-mensaje").value;
 
-  if (validarCaracteresEspeciales(mensajeEntrada)) {
-    var mensajeVerificado = verificarTexto(mensajeEntrada);
-    var mensajeEncriptado = encriptarMensaje(mensajeVerificado);
-    document.getElementById("caja-resultado").value = mensajeEncriptado;
-  } else {
-    alert(
-      "La frase contiene caracteres especiales. Por favor, utiliza solo letras minúsculas y sin acentos."
-    );
+  if (validarCaja(mensajeEntrada)) {
+    if (validarCaracteresEspeciales(mensajeEntrada)) {
+      var mensajeVerificado = verificarTexto(mensajeEntrada);
+      var mensajeEncriptado = encriptarMensaje(mensajeVerificado);
+      document.getElementById("caja-resultado").value = mensajeEncriptado;
+    } else {
+      alert(
+        "La frase contiene caracteres especiales. Por favor, utiliza solo letras minúsculas y sin acentos."
+      );
+    }
   }
 }
 
 function desencriptar() {
   var mensajeEncriptado = document.getElementById("caja-mensaje").value;
 
-  if (validarCaracteresEspeciales(mensajeEncriptado)) {
-    var mensajeVerificado = verificarTexto(mensajeEncriptado);
-    var mensajeDesencriptado = desencriptarMensaje(mensajeVerificado);
-    document.getElementById("caja-resultado").value = mensajeDesencriptado;
-  } else {
-    "La frase contiene caracteres especiales. Por favor, utiliza solo letras minúsculas y sin acentos.";
+  if (validarCaja(mensajeEncriptado)) {
+    if (validarCaracteresEspeciales(mensajeEncriptado)) {
+      var mensajeVerificado = verificarTexto(mensajeEncriptado);
+      var mensajeDesencriptado = desencriptarMensaje(mensajeVerificado);
+      document.getElementById("caja-resultado").value = mensajeDesencriptado;
+    } else {
+      ("La frase contiene caracteres especiales. Por favor, utiliza solo letras minúsculas y sin acentos.");
+    }
   }
 }
-
 
 function verificarTexto(mensaje) {
   if (mensaje == mensaje.toLowerCase()) {
@@ -76,4 +79,12 @@ function actualizarResultado(contenido) {
   contenidoInicial.style.display = "none";
   // Muestra el cuadro de resultado
   cajaResultado.style.display = "block";
+}
+
+function validarCaja(entrada) {
+  if (entrada == "") {
+    alert("No se encontró ningun mensaje para proceder.");
+  } else {
+    return true;
+  }
 }
