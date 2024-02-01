@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 </head>
 
@@ -18,28 +18,34 @@
         <img src="./img/alura-logo.svg" alt="logo alura">
     </header>
 
-    <body>
 
-        <form>
-            <fieldset class="editable">
-                <textarea id="mensaje-box" name="mensaje-box" placeholder="Ingrese el texto aqui"></textarea>
-                <label id="advertencia" for="mensaje-box"> &#9888; Solo letras minúsculas y sin acentos</label>
+    <form>
+        <fieldset class="editable">
+            <textarea id="caja-mensaje" name="caja-mensaje" placeholder="Ingrese el texto aqui"></textarea>
+            <label id="advertencia" for="caja-mensaje"> &#9888; Solo letras minúsculas y sin acentos</label>
+            <div class="caja-botones">
                 <button class="encriptar" onclick="encriptar();">Encriptar</button>
                 <button class="desencriptar" onclick="desencriptar();">Desencriptar</button>
-            </fieldset>
-            <fieldset class="no-editable">
-                <textarea id="mensaje-resultado-box" name="mensaje-resultado-box" readonly></textarea>
-                <label for="mensaje-resultado-box">Respuesta:</label>
+            </div>
 
-            </fieldset>
-        </form>
+        </fieldset>
+        <fieldset class="no-editable">
+            <div id="contenido-inicial">
+                <img src="./img/muneco.svg" alt="sin texto a encriptar">
+                <p>Ningún mensaje fue encontrado</p>
+            </div>
+            <textarea id="caja-resultado" name="caja-resultado" readonly></textarea>
 
-        <footer>
-            &copy; Todos los derechos reservados - David Gomez
-        </footer>
 
-        <script src="script.js"></script>
+        </fieldset>
+    </form>
 
-    </body>
+    <footer>
+        &copy; Todos los derechos reservados - David Gomez
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
 
 </html>
