@@ -88,3 +88,8 @@ function validarCaja(entrada) {
     return true;
   }
 }
+
+// Agregamos el evento input al primer campo de texto para limpiar el segundo campo cuando se borra
+        document.getElementById("caja-mensaje").addEventListener("input", function() {
+            document.getElementById("caja-resultado").value = "";
+        });
