@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>Encriptador Alura</title>
+
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,26 +20,26 @@
     </header>
 
 
-    <form>
-        <fieldset class="editable">
-            <textarea id="caja-mensaje" name="caja-mensaje" placeholder="Ingrese el texto aqui"></textarea>
+    <section class="form">
+        <div class="editable">
+            <textarea id="caja-mensaje" placeholder="Ingrese el texto aqui"></textarea>
             <label id="advertencia" for="caja-mensaje"> &#9888; Solo letras minúsculas y sin acentos</label>
             <div class="caja-botones">
                 <button class="encriptar" onclick="encriptar();">Encriptar</button>
                 <button class="desencriptar" onclick="desencriptar();">Desencriptar</button>
             </div>
 
-        </fieldset>
-        <fieldset class="no-editable">
+        </div>
+        <div class="no-editable">
             <div id="contenido-inicial">
                 <img src="./img/muneco.svg" alt="sin texto a encriptar">
                 <p>Ningún mensaje fue encontrado</p>
             </div>
-            <textarea id="caja-resultado" name="caja-resultado" readonly></textarea>
+            <textarea id="caja-resultado" readonly></textarea>
 
 
-        </fieldset>
-    </form>
+        </div>
+    </section>
 
     <footer>
         &copy; Todos los derechos reservados - David Gomez

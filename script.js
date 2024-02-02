@@ -1,11 +1,31 @@
+function validarCaja(entrada) {
+  if (entrada === "") {
+    alert("No se encontró ningun mensaje para proceder.");
+  } else {
+    return true;
+  }
+}
+
+function validarCaracteresEspeciales(mensaje) {
+  // Expresión regular que representa cualquier carácter que no sea alfabetico ni espacio en blanco.
+  var caracteresEspeciales = /[^a-zA-Z\s]/;
+  if (caracteresEspeciales.test(mensaje)) {
+    // Se encontraron caracteres especiales, la frase no es válida.
+    return false;
+  } else {
+    // No se encontraron caracteres especiales, la frase es válida.
+    return true;
+  }
+}
+
 function encriptar() {
   var mensajeEntrada = document.getElementById("caja-mensaje").value;
-
   if (validarCaja(mensajeEntrada)) {
     if (validarCaracteresEspeciales(mensajeEntrada)) {
       var mensajeVerificado = verificarTexto(mensajeEntrada);
       var mensajeEncriptado = encriptarMensaje(mensajeVerificado);
       document.getElementById("caja-resultado").value = mensajeEncriptado;
+      actualizarResultado(mensajeEncriptado);
     } else {
       alert(
         "La frase contiene caracteres especiales. Por favor, utiliza solo letras minúsculas y sin acentos."
@@ -16,38 +36,28 @@ function encriptar() {
 
 function desencriptar() {
   var mensajeEncriptado = document.getElementById("caja-mensaje").value;
-
   if (validarCaja(mensajeEncriptado)) {
     if (validarCaracteresEspeciales(mensajeEncriptado)) {
       var mensajeVerificado = verificarTexto(mensajeEncriptado);
       var mensajeDesencriptado = desencriptarMensaje(mensajeVerificado);
       document.getElementById("caja-resultado").value = mensajeDesencriptado;
+      actualizarResultado(mensajeDesencriptado);
     } else {
-      ("La frase contiene caracteres especiales. Por favor, utiliza solo letras minúsculas y sin acentos.");
+      alert(
+        "La frase contiene caracteres especiales. Por favor, utiliza solo letras minúsculas y sin acentos."
+      );
     }
   }
 }
 
 function verificarTexto(mensaje) {
-  if (mensaje == mensaje.toLowerCase()) {
+  if (mensaje === mensaje.toLowerCase()) {
     return mensaje;
   } else {
     alert(
       "El texto debe  estar en letra minúscula... se procederá a cambiarlo"
     );
     return mensaje.toLowerCase();
-  }
-}
-
-function validarCaracteresEspeciales(mensaje) {
-  var caracteresEspeciales = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\\/`'"|=]/;
-
-  if (caracteresEspeciales.test(mensaje)) {
-    // Se encontraron caracteres especiales, la frase no es válida.
-    return false;
-  } else {
-    // No se encontraron caracteres especiales, la frase es válida.
-    return true;
   }
 }
 
@@ -72,19 +82,9 @@ function desencriptarMensaje(mensajeEncriptado) {
 function actualizarResultado(contenido) {
   var cajaResultado = document.getElementById("caja-resultado");
   var contenidoInicial = document.getElementById("contenido-inicial");
-
   cajaResultado.value = contenido;
-
   // Oculta el contenido inicial cuando se muestra la respuesta
   contenidoInicial.style.display = "none";
   // Muestra el cuadro de resultado
   cajaResultado.style.display = "block";
-}
-
-function validarCaja(entrada) {
-  if (entrada == "") {
-    alert("No se encontró ningun mensaje para proceder.");
-  } else {
-    return true;
-  }
 }
