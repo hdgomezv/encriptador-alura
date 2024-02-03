@@ -88,3 +88,17 @@ function actualizarResultado(contenido) {
   // Muestra el cuadro de resultado
   cajaResultado.style.display = "block";
 }
+
+function copiarAlPortapapeles() {
+            /* Seleccionar el cuadro de texto */
+            var cuadroDeTexto = document.getElementById("caja-resultado").value;
+
+            cuadroDeTexto.select();
+            cuadroDeTexto.setSelectionRange(0, 99999); /* Para dispositivos móviles */
+
+            /* Copiar el texto al portapapeles */
+            document.execCommand("copy");
+
+            /* Alerta al usuario */
+            alert("¡Texto copiado al portapapeles!");
+        }
