@@ -1,28 +1,52 @@
-# encriptador-alura
+# Encriptador Alura
 
-<h1>Encryptor Alura</h1>
+Este es un proyecto web de encriptación y desencriptación de mensajes desarrollado por David Gomez para un Challenge de Alura Latam.
 
-<h2>To Do</h2>
+## Características
 
-- Título de su sitio web
-- Campo para el texto que va a ser encriptado/desencriptado
-- Un botón para encriptar
-- Un botón para desencriptar
-- Área para mostrar el texto encriptado/desencriptado.-->
-
-30-01-24 Se realizan los TO DO pendientes, se elabora un JS provisional y se trabaja en el CSS.
-
-Requisitos:
+- Encripta y desencripta mensajes.
+- Acepta solo letras minúsculas y sin acentos.
 
 
-Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
-Por ejemplo:
-"gato" => "gaitober"
-gaitober" => "gato"
+## Estructura de archivos
 
-La página debe tener campos para
-inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
-El resultado debe ser mostrado en la pantalla.
-Extras:
+- `index.html`: Página principal del proyecto.
+- `reset.css`: Hoja de estilos para resetear estilos predeterminados del navegador.
+- `style.css`: Hoja de estilos personalizada para el proyecto.
+- `script.js`: Archivo JavaScript que contiene la lógica del encriptador.
 
-Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
+## Instalación
+
+No es necesario instalar nada para utilizar este proyecto. Solo abre el archivo `index.html` en tu navegador web.
+
+## Uso
+
+1. Ingresa el mensaje en la caja de texto.
+2. Haz clic en el botón "Encriptar" o "Desencriptar".
+3. Copia el resultado si lo deseas.
+
+## Lógica de Encriptación
+
+El proyecto utiliza una lógica simple de encriptación y desencriptación, sustituyendo ciertas letras por combinaciones específicas.
+
+## Contribución
+
+Si deseas contribuir a este proyecto, sigue estos pasos:
+
+1. Haz un fork del proyecto.
+2. Crea una rama para tu contribución: `git checkout -b mi-contribucion`
+3. Realiza tus cambios y commitea: `git commit -m 'Añadir nueva característica'`
+4. Sube tus cambios: `git push origin mi-contribucion`
+5. Abre una solicitud de extracción en GitHub.
+
+## Licencia
+
+Sin Licencia
+
+## Autor
+
+- David Gomez
+
+---
+
+&copy; Todos los derechos reservados - David Gomez
