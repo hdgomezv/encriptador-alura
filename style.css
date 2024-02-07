@@ -140,9 +140,7 @@ footer {
 
 /*media query*/
 
-/*media query*/
-
-@media screen and (max-width: 667px) {
+@media (max-width:768px) {
 
     .form {
         display: block;
@@ -171,7 +169,7 @@ footer {
         width: 60%;
         height: 3em;
         position: absolute;
-        bottom: 1em em;
+        bottom: 1em;
     }
 
     contenido-inicial {
