@@ -26,6 +26,10 @@ body {
 .no-editable {
     width: 30%;
     margin: 0 3% 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
 }
 
 .caja-botones {
@@ -38,13 +42,13 @@ body {
 .encriptar,
 .desencriptar {
     border-radius: 2em;
-    border: none;
     cursor: pointer;
     width: 40%;
     height: 3em;
 }
 
 .encriptar {
+    border: none;
     background: #0A3871;
     color: white;
 }
@@ -52,6 +56,22 @@ body {
 .desencriptar {
     background: #D8DFE8;
     color: #0A3871;
+    border-style: solid;
+    border-width: 0.05em;
+    border-color: #0A3871;
+
+}
+
+.boton-copia {
+    border: none;
+    border-radius: 2em;
+    background: #0A3871;
+    color: white;
+    cursor: pointer;
+    width: 60%;
+    height: 3em;
+    position: absolute;
+    bottom: 2.5em;
 }
 
 #caja-mensaje {
@@ -65,7 +85,7 @@ body {
 
 #caja-resultado {
     width: 85%;
-    height: 400px;
+    height: 350px;
     border-radius: 2em;
     padding: 10%;
     border: none;
@@ -77,7 +97,7 @@ body {
 
 #contenido-inicial {
     width: 85%;
-    height: 400px;
+    height: 350px;
     border-radius: 2em;
     padding: 10%;
     border: none;
@@ -116,4 +136,51 @@ footer {
     padding: 10px;
     background: #0A3871;
     color: white;
+}
+
+/*media query*/
+
+/*media query*/
+
+@media screen and (max-width: 667px) {
+
+    .form {
+        display: block;
+    }
+
+    .editable {
+        width: 100%;
+        margin: 5%;
+    }
+
+    .no-editable {
+        width: 100%;
+        margin: 3%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton-copia {
+        border: none;
+        border-radius: 2em;
+        background: #0A3871;
+        color: white;
+        cursor: pointer;
+        width: 60%;
+        height: 3em;
+        position: absolute;
+        bottom: 1em em;
+    }
+
+    contenido-inicial {
+        width: 70%;
+        height: 350px;
+        border-radius: 2em;
+        padding: 10%;
+        border: none;
+        text-align: center;
+        background-color: white;
+    }
 }

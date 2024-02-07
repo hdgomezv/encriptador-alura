@@ -88,3 +88,9 @@ function actualizarResultado(contenido) {
   // Muestra el cuadro de resultado
   cajaResultado.style.display = "block";
 }
+
+function copiarAlPortapapeles() {
+  document.getElementById("caja-resultado").select();
+  document.execCommand("copy");
+  alert("Contenido copiado al portapapeles");
+}

@@ -5,21 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Encriptador Alura</title>
-
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     <header class="alura-logo">
         <img src="./img/alura-logo.svg" alt="logo alura">
     </header>
-
-
     <section class="form">
         <div class="editable">
             <textarea id="caja-mensaje" placeholder="Ingrese el texto aqui"></textarea>
@@ -28,7 +24,6 @@
                 <button class="encriptar" onclick="encriptar();">Encriptar</button>
                 <button class="desencriptar" onclick="desencriptar();">Desencriptar</button>
             </div>
-
         </div>
         <div class="no-editable">
             <div id="contenido-inicial">
@@ -36,17 +31,15 @@
                 <p>Ningún mensaje fue encontrado</p>
             </div>
             <textarea id="caja-resultado" readonly></textarea>
-
-
+            <button class="boton-copia" onclick="copiarAlPortapapeles();">
+                Copiar
+            </button>
         </div>
     </section>
-
     <footer>
         &copy; Todos los derechos reservados - David Gomez
     </footer>
-
     <script src="script.js"></script>
-
 </body>
 
 </html>
