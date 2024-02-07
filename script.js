@@ -55,11 +55,11 @@ function verificarTexto(mensaje) {
     return mensaje;
   } else {
     alert(
-      "El texto debe  estar en letra minúscula... se procederá a cambiarlo"
+      "El texto no está en minúsculas. Por favor, ingresa un texto en minúsculas."
     );
-    return mensaje.toLowerCase();
   }
 }
+
 
 function encriptarMensaje(mensaje) {
   return mensaje
